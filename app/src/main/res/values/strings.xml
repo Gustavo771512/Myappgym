@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_dia_pecho">dia_pecho</string>
+    <string name="title_activity_diaespalda">diaespalda</string>
+    <string name="title_activity_rutina">rutina</string>
+    <string name="title_activity_rutina_espalda">RutinaEspalda</string>
+    <string name="title_activity_selecionar_dia">selecionar_dia</string>
+    <string name="title_activity_dia_espalda">DiaEspalda</string>
+    <string name="title_activity_dia_pierna">DiaPierna</string>
+    <string name="title_activity_rutina_pierna">RutinaPierna</string>
+    <string name="title_activity_tu_pr">TuPr</string>
+</resources>

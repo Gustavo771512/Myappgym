@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>dia.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+dia.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">myapplication</span><span class="s2">;</span>
+
+
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">content</span><span class="s2">.</span><span class="s1">Intent</span><span class="s2">;</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">ComponentActivity</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">setContent</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">Image</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.*;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material3</span><span class="s2">.</span><span class="s1">Button</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material3</span><span class="s2">.</span><span class="s1">Text</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">runtime</span><span class="s2">.</span><span class="s1">Composable</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">Alignment</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">Modifier</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">platform</span><span class="s2">.</span><span class="s1">LocalContext</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">res</span><span class="s2">.</span><span class="s1">painterResource</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">font</span><span class="s2">.</span><span class="s1">FontWeight</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">tooling</span><span class="s2">.</span><span class="s1">preview</span><span class="s2">.</span><span class="s1">Preview</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">unit</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">unit</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">;</span>
+
+
+<span class="s0">class </span><span class="s1">dia : ComponentActivity</span><span class="s2">() {</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
+        <span class="s1">setContent </span><span class="s2">{</span>
+            <span class="s1">diaScreen</span><span class="s2">()</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">diaScreen</span><span class="s2">() {</span>
+    <span class="s0">val </span><span class="s1">context </span><span class="s2">= </span><span class="s1">LocalContext</span><span class="s2">.</span><span class="s1">current</span>
+
+
+    <span class="s1">Column</span><span class="s2">(</span>
+        <span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">fillMaxSize</span><span class="s2">().</span><span class="s1">padding</span><span class="s2">(</span><span class="s3">22</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">),</span>
+        <span class="s1">horizontalAlignment </span><span class="s2">= </span><span class="s1">Alignment</span><span class="s2">.</span><span class="s1">CenterHorizontally</span>
+    <span class="s2">) {</span>
+        <span class="s1">Spacer</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">height</span><span class="s2">(</span><span class="s3">29</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">))</span>
+        <span class="s1">Text</span><span class="s2">(</span><span class="s1">text </span><span class="s2">= </span><span class="s4">&quot;TU&quot;</span><span class="s2">, </span><span class="s1">fontSize </span><span class="s2">= </span><span class="s3">36</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">, </span><span class="s1">fontWeight </span><span class="s2">= </span><span class="s1">FontWeight</span><span class="s2">.</span><span class="s1">Bold</span><span class="s2">)</span>
+        <span class="s1">Text</span><span class="s2">(</span><span class="s1">text </span><span class="s2">= </span><span class="s4">&quot;RUTINA DE HOY&quot;</span><span class="s2">, </span><span class="s1">fontSize </span><span class="s2">= </span><span class="s3">32</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">, </span><span class="s1">fontWeight </span><span class="s2">= </span><span class="s1">FontWeight</span><span class="s2">.</span><span class="s1">Bold</span><span class="s2">)</span>
+        <span class="s1">Spacer</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">height</span><span class="s2">(</span><span class="s3">29</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">))</span>
+
+
+        <span class="s1">Column</span><span class="s2">(</span><span class="s1">horizontalAlignment </span><span class="s2">= </span><span class="s1">Alignment</span><span class="s2">.</span><span class="s1">CenterHorizontally</span><span class="s2">) {</span>
+            <span class="s1">Row</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">fillMaxWidth</span><span class="s2">(), </span><span class="s1">horizontalArrangement </span><span class="s2">= </span><span class="s1">Arrangement</span><span class="s2">.</span><span class="s1">SpaceEvenly</span><span class="s2">) {</span>
+                <span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">drawable</span><span class="s2">.</span><span class="s1">inclinado</span><span class="s2">, </span><span class="s4">&quot;6/8 X 3&quot;</span><span class="s2">)</span>
+                <span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">drawable</span><span class="s2">.</span><span class="s1">banca</span><span class="s2">, </span><span class="s4">&quot;8 X 4&quot;</span><span class="s2">)</span>
+            <span class="s2">}</span>
+            <span class="s1">Spacer</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">height</span><span class="s2">(</span><span class="s3">14</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">))</span>
+            <span class="s1">Row</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">fillMaxWidth</span><span class="s2">(), </span><span class="s1">horizontalArrangement </span><span class="s2">= </span><span class="s1">Arrangement</span><span class="s2">.</span><span class="s1">SpaceEvenly</span><span class="s2">) {</span>
+                <span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">drawable</span><span class="s2">.</span><span class="s1">peck_deck</span><span class="s2">, </span><span class="s4">&quot;12 X 4&quot;</span><span class="s2">)</span>
+                <span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">drawable</span><span class="s2">.</span><span class="s1">ext_triceps</span><span class="s2">, </span><span class="s4">&quot;12 X 3&quot;</span><span class="s2">)</span>
+            <span class="s2">}</span>
+            <span class="s1">Spacer</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">height</span><span class="s2">(</span><span class="s3">14</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">))</span>
+            <span class="s1">Row</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">fillMaxWidth</span><span class="s2">(), </span><span class="s1">horizontalArrangement </span><span class="s2">= </span><span class="s1">Arrangement</span><span class="s2">.</span><span class="s1">SpaceEvenly</span><span class="s2">) {</span>
+                <span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">drawable</span><span class="s2">.</span><span class="s1">fondos</span><span class="s2">, </span><span class="s4">&quot;8 X 3&quot;</span><span class="s2">)</span>
+                <span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">drawable</span><span class="s2">.</span><span class="s1">cardio</span><span class="s2">, </span><span class="s4">&quot;30 m&quot;</span><span class="s2">)</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+        <span class="s1">Spacer</span><span class="s2">(</span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">height</span><span class="s2">(</span><span class="s3">29</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">))</span>
+        <span class="s1">Button</span><span class="s2">(</span>
+            <span class="s1">onClick </span><span class="s2">= {</span>
+                <span class="s0">val </span><span class="s1">intent </span><span class="s2">= </span><span class="s1">Intent</span><span class="s2">(</span><span class="s1">context</span><span class="s2">, </span><span class="s1">Rutina::</span><span class="s0">class</span><span class="s2">.</span><span class="s1">java</span><span class="s2">)</span>
+                <span class="s1">context</span><span class="s2">.</span><span class="s1">startActivity</span><span class="s2">(</span><span class="s1">intent</span><span class="s2">)</span>
+            <span class="s2">},</span>
+            <span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">padding</span><span class="s2">(</span><span class="s3">14</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">)</span>
+        <span class="s2">) {</span>
+            <span class="s1">Text</span><span class="s2">(</span><span class="s1">text </span><span class="s2">= </span><span class="s4">&quot;INICIA&quot;</span><span class="s2">, </span><span class="s1">fontSize </span><span class="s2">= </span><span class="s3">25</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">, </span><span class="s1">fontWeight </span><span class="s2">= </span><span class="s1">FontWeight</span><span class="s2">.</span><span class="s1">Bold</span><span class="s2">)</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">RutinaItem</span><span class="s2">(</span><span class="s1">imageRes: Int</span><span class="s2">, </span><span class="s1">text: String</span><span class="s2">) {</span>
+    <span class="s1">Column</span><span class="s2">(</span><span class="s1">horizontalAlignment </span><span class="s2">= </span><span class="s1">Alignment</span><span class="s2">.</span><span class="s1">CenterHorizontally</span><span class="s2">, </span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">padding</span><span class="s2">(</span><span class="s3">14</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">)) {</span>
+        <span class="s1">Image</span><span class="s2">(</span><span class="s1">painter </span><span class="s2">= </span><span class="s1">painterResource</span><span class="s2">(</span><span class="s1">id </span><span class="s2">= </span><span class="s1">imageRes</span><span class="s2">), </span><span class="s1">contentDescription </span><span class="s2">= </span><span class="s0">null</span><span class="s2">, </span><span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">size</span><span class="s2">(</span><span class="s3">144</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">))</span>
+        <span class="s1">Text</span><span class="s2">(</span><span class="s1">text </span><span class="s2">= </span><span class="s1">text</span><span class="s2">, </span><span class="s1">fontSize </span><span class="s2">= </span><span class="s3">22</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">, </span><span class="s1">fontWeight </span><span class="s2">= </span><span class="s1">FontWeight</span><span class="s2">.</span><span class="s1">Bold</span><span class="s2">)</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s1">@Preview</span><span class="s2">(</span><span class="s1">showBackground </span><span class="s2">= </span><span class="s0">true</span><span class="s2">)</span>
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">diaPreview</span><span class="s2">() {</span>
+    <span class="s1">diaScreen</span><span class="s2">()</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

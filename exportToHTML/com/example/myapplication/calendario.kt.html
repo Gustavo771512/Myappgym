@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>calendario.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+calendario.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">myapplication</span><span class="s2">;</span>
+
+
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">content</span><span class="s2">.</span><span class="s1">Intent</span><span class="s2">;</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">Button</span><span class="s2">;</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">CalendarView</span><span class="s2">;</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">LinearLayout</span><span class="s2">;</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">TextView</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">ComponentActivity</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">runtime</span><span class="s2">.</span><span class="s1">Composable</span><span class="s2">;</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">tooling</span><span class="s2">.</span><span class="s1">preview</span><span class="s2">.</span><span class="s1">Preview</span><span class="s2">;</span>
+
+
+<span class="s0">class </span><span class="s1">calendario : ComponentActivity</span><span class="s2">() {</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
+
+
+        <span class="s0">val </span><span class="s1">layout </span><span class="s2">= </span><span class="s1">LinearLayout</span><span class="s2">(</span><span class="s0">this</span><span class="s2">)</span>
+        <span class="s1">layout</span><span class="s2">.</span><span class="s1">orientation </span><span class="s2">= </span><span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">VERTICAL</span>
+        <span class="s1">layout</span><span class="s2">.</span><span class="s1">layoutParams </span><span class="s2">= </span><span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">LayoutParams</span><span class="s2">(</span>
+            <span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">LayoutParams</span><span class="s2">.</span><span class="s1">MATCH_PARENT</span><span class="s2">,</span>
+            <span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">LayoutParams</span><span class="s2">.</span><span class="s1">MATCH_PARENT</span>
+        <span class="s2">)</span>
+
+
+        <span class="s0">val </span><span class="s1">spacer </span><span class="s2">= </span><span class="s1">TextView</span><span class="s2">(</span><span class="s0">this</span><span class="s2">)</span>
+        <span class="s1">spacer</span><span class="s2">.</span><span class="s1">text </span><span class="s2">= </span><span class="s3">&quot;</span><span class="s0">\n\n\n</span><span class="s3">&quot;</span>
+        <span class="s1">layout</span><span class="s2">.</span><span class="s1">addView</span><span class="s2">(</span><span class="s1">spacer</span><span class="s2">)</span>
+
+
+        <span class="s0">val </span><span class="s1">calendarView </span><span class="s2">= </span><span class="s1">CalendarView</span><span class="s2">(</span><span class="s0">this</span><span class="s2">)</span>
+        <span class="s1">calendarView</span><span class="s2">.</span><span class="s1">layoutParams </span><span class="s2">= </span><span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">LayoutParams</span><span class="s2">(</span>
+            <span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">LayoutParams</span><span class="s2">.</span><span class="s1">MATCH_PARENT</span><span class="s2">,</span>
+            <span class="s1">LinearLayout</span><span class="s2">.</span><span class="s1">LayoutParams</span><span class="s2">.</span><span class="s1">WRAP_CONTENT</span>
+        <span class="s2">)</span>
+        <span class="s1">layout</span><span class="s2">.</span><span class="s1">addView</span><span class="s2">(</span><span class="s1">calendarView</span><span class="s2">)</span>
+
+
+        <span class="s0">val </span><span class="s1">weeksTextView </span><span class="s2">= </span><span class="s1">TextView</span><span class="s2">(</span><span class="s0">this</span><span class="s2">)</span>
+        <span class="s1">weeksTextView</span><span class="s2">.</span><span class="s1">text </span><span class="s2">= </span><span class="s3">&quot;Semana 1: Descarga</span><span class="s0">\n</span><span class="s3">Semana 2: &quot; </span><span class="s2">+</span>
+                <span class="s3">&quot;Carga Leve</span><span class="s0">\n</span><span class="s3">Semana 3: Carga Pesada</span><span class="s0">\n</span><span class="s3">Semana 4: Carga Leve&quot; </span><span class="s2">+</span>
+                <span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Semana 5: Carga Pesada &quot;</span>
+        <span class="s1">weeksTextView</span><span class="s2">.</span><span class="s1">textSize </span><span class="s2">= </span><span class="s4">25f</span>
+        <span class="s1">weeksTextView</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s4">20</span><span class="s2">, </span><span class="s4">50</span><span class="s2">, </span><span class="s4">20</span><span class="s2">, </span><span class="s4">20</span><span class="s2">)</span>
+        <span class="s1">layout</span><span class="s2">.</span><span class="s1">addView</span><span class="s2">(</span><span class="s1">weeksTextView</span><span class="s2">)</span>
+
+
+        <span class="s0">val </span><span class="s1">inicioButton </span><span class="s2">= </span><span class="s1">Button</span><span class="s2">(</span><span class="s0">this</span><span class="s2">)</span>
+        <span class="s1">inicioButton</span><span class="s2">.</span><span class="s1">text </span><span class="s2">= </span><span class="s3">&quot;Inicio&quot;</span>
+        <span class="s1">inicioButton</span><span class="s2">.</span><span class="s1">setOnClickListener </span><span class="s2">{</span>
+            <span class="s0">val </span><span class="s1">intent </span><span class="s2">= </span><span class="s1">Intent</span><span class="s2">(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">MainActivity::</span><span class="s0">class</span><span class="s2">.</span><span class="s1">java</span><span class="s2">)</span>
+            <span class="s1">startActivity</span><span class="s2">(</span><span class="s1">intent</span><span class="s2">)</span>
+        <span class="s2">}</span>
+        <span class="s1">layout</span><span class="s2">.</span><span class="s1">addView</span><span class="s2">(</span><span class="s1">inicioButton</span><span class="s2">)</span>
+
+
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">layout</span><span class="s2">)</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s1">@Preview</span><span class="s2">(</span><span class="s1">showBackground </span><span class="s2">= </span><span class="s0">true</span><span class="s2">)</span>
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">calendarioPreview</span><span class="s2">() {</span>
+
+
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

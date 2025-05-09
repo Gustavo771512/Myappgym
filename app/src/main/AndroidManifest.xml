@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".TuPr"
+            android:exported="false"
+            android:label="@string/title_activity_tu_pr"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".RutinaPierna"
+            android:exported="false"
+            android:label="@string/title_activity_rutina_pierna"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".DiaPierna"
+            android:exported="false"
+            android:label="@string/title_activity_dia_pierna"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".DiaEspalda"
+            android:exported="false"
+            android:label="@string/title_activity_dia_espalda"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".selecionar_dia"
+            android:exported="false"
+            android:label="@string/title_activity_selecionar_dia"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".RutinaEspalda"
+            android:exported="false"
+            android:label="@string/title_activity_rutina_espalda"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".rutina"
+            android:exported="false"
+            android:label="@string/title_activity_rutina"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".diaespalda"
+            android:exported="false"
+            android:label="@string/title_activity_diaespalda"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".dia_pecho"
+            android:exported="false"
+            android:label="@string/title_activity_dia_pecho"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".ui.theme.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".marca"
+            android:exported="false" />
+        <activity
+            android:name=".Historial"
+            android:exported="false" />
+        <activity
+            android:name=".Rutina"
+            android:exported="false" />
+        <activity
+            android:name=".dia"
+            android:exported="false" />
+        <activity
+            android:name=".calendario"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
